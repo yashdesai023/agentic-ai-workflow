@@ -1,0 +1,14 @@
+Subject: Invoice #INV-2025-001 for Consultation
+From: billing@cloudservices.io
+Date: 2025-11-18
+
+Dear Customer,
+
+Attached is the invoice for October cloud consultation services.
+Total amount due: $450.00
+Due Date: 2025-11-25
+
+Please ensure payment is processed by the due date.
+
+Regards,
+Billing Team

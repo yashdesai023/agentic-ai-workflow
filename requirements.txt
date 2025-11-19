@@ -1,0 +1,38 @@
+# FastAPI & Server
+fastapi
+uvicorn[standard]
+python-multipart
+
+# HTTP & Utils
+httpx
+requests
+pydantic
+python-dotenv
+
+# Database
+sqlalchemy
+databases
+alembic
+
+# Logging
+structlog
+
+# Vector DB / RAG
+faiss-cpu
+
+# LLM Provider (Gemini)
+google-generativeai
+
+# Agents / LLM orchestration
+langchain
+langchain-community
+
+# Background Processing
+redis
+celery
+
+# Testing
+pytest
+
+# Deployment
+gunicorn
