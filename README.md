@@ -1,107 +1,253 @@
-# Agentic AI — Workflow Automation System
+# 🤖 Agentic AI Workflow Automation System  
+**_Autonomous Multi-Agent Email Intelligence Platform • CrewAI + Gemini + FastAPI + Streamlit_**
 
-**One-liner:** An Agentic AI system that ingests emails, summarizes content, extracts structured tasks, proposes draft replies, and performs or suggests actions — built for demoing LLM orchestration, RAG/memory, and deployment.
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![CrewAI](https://img.shields.io/badge/Agents-CrewAI-orange)
+![LLM](https://img.shields.io/badge/LLM-Gemini%201.5%20Flash-8A2BE2)
+![FAISS](https://img.shields.io/badge/VectorDB-FAISS-purple)
+![Streamlit](https://img.shields.io/badge/UI-Streamlit-red)
+![Docker](https://img.shields.io/badge/Deploy-Docker-blue)
 
----
-
-## Demo (what to show)
-
-* Short 60–90s demo: ingest an email → summary → extracted tasks → draft reply → approve action (create calendar event / add todo).
-* Include a GIF or short MP4 here showing the flow.
-
----
-
-## Features
-
-* Email ingestion (mock files, Gmail/IMAP planned)
-* LLM-based summarization & structured task extraction
-* Multi-agent orchestration (Reader, Summarizer, TaskExtractor, ReplyAgent, ActionAgent)
-* Vector memory + RAG (FAISS local; easily swappable to Pinecone/Weaviate)
-* FastAPI backend with REST endpoints for demo & integration
-* SQLite/Postgres for persistence; audit logs + metrics
-* Dockerized services + CI/CD (GitHub Actions)
-* Simple UI (optional) for approving replies & viewing tasks
+> **A Production-Ready Multi-Agent System that reads emails, extracts tasks, generates smart replies, and remembers long-term context using Vector Memory (FAISS).**  
+> Built as a **flagship Generative AI project** for real-world enterprise automation use cases.
 
 ---
 
-## Quick start (local / mock-first)
+# 📌 Overview
 
-1. Clone the repo.
-2. Create a Python virtual environment and install dependencies (requirements listed in `README` later).
-3. Populate `sample_data/` with example `.eml` or `.txt` emails (we include 10 sample emails).
-4. Run the mock ingestion flow (ingest a sample email → get summary + tasks).
+Modern teams deal with **email overload**, context switching, and tasks hidden inside messages.  
+This project solves that using a fully autonomous **Agentic AI Workflow System** that:
 
-> Note: This README is the documentation entrypoint — see `docs/` for architecture, prompts, OAuth setup, API specs, and runbook.
+### ✅ Reads & understands raw emails  
+### ✅ Summarizes long threads  
+### ✅ Extracts structured tasks (JSON)  
+### ✅ Generates professional replies  
+### ✅ Stores memory (via embeddings) for future recall  
+
+Unlike a simple chatbot, this system uses **true agentic reasoning**, where each agent has:
+
+- 🧠 Its own **role**
+- 🎯 Its own **goal**
+- 🔧 Its own **toolset**
+- 🔄 A shared memory (vector DB)
+- 🗂️ A central orchestrator via **CrewAI**
+
+It is built with a **backend-first architecture (FastAPI)** and a clean **Streamlit UI**, making it perfect for production, demos, and portfolio showcase.
 
 ---
 
-## Repo structure (short)
+# 🏗️ Architecture
 
+### **High-Level System Architecture**
+
+```mermaid
+graph LR
+    UI[Streamlit UI] -->|User Input| API(FastAPI Backend)
+
+    subgraph BackEnd - CrewAI Orchestrator
+        API --> O{Orchestrator}
+        O --> A1[Summarizer Agent]
+        O --> A2[Task Analyst Agent]
+        O --> A3[Reply Generator Agent]
+    end
+
+    A1 -->|Writes Memory| V[(FAISS Vector DB)]
+    A2 -->|Reads/Stores Memory| V
+    A3 -->|Retrieves Context| V
+
+    A3 --> API --> UI
 ```
-agentic-ai/
-├── docs/                # Documentation: architecture, prompts, oauth, runbook
+
+### **Why This Architecture Passes Recruiter Bar?**
+Because it shows mastery in:
+
+✔️ Multi-agent orchestration  
+✔️ Tool-calling reasoning  
+✔️ Memory-augmented LLM workflows  
+✔️ API-first architecture + UI separation  
+✔️ RAG + Agents + MLOps alignment  
+
+This is the exact structure used in modern **AI automation companies**.
+
+---
+
+# 🚀 Key Features
+
+### 🧠 1. **Autonomous Multi-Agent Team (CrewAI)**  
+- **Summarizer Agent:** Understands long email threads.  
+- **Task Agent:** Extracts to-do items in JSON with deadlines.  
+- **Reply Agent:** Generates professional, contextual email responses.  
+
+### 🗂️ 2. **Vector Memory (FAISS)**  
+Stores semantic memory for:  
+- Project codes  
+- Confidential context  
+- Past conversation snippets  
+- Long-term knowledge  
+
+Memory is queried automatically.
+
+### 🔌 3. **API-Driven Backend (FastAPI)**  
+Modern, async, production-ready backend with:  
+- Validation (Pydantic)  
+- CORS support  
+- Clean routing structure  
+
+### 💻 4. **Streamlit Frontend**  
+- One-click execution  
+- Memory search panel  
+- Auto-scroll logs  
+- Copy-to-clipboard replies  
+
+### 🐳 5. **Dockerized for Deployment**  
+You can deploy it on:  
+- Render  
+- Railway  
+- AWS EC2  
+- Azure Container Apps  
+
+---
+
+# 🛠️ Tech Stack
+
+| Layer | Technology | Description |
+|-------|------------|-------------|
+| **LLM & Reasoning** | CrewAI, Google Gemini 1.5 Flash | Agent roles, task delegation, reasoning loops |
+| **Vector Store** | FAISS | In-memory & disk-based similarity search |
+| **Backend** | FastAPI | High-performance REST API |
+| **Frontend** | Streamlit | Lightweight reactive UI |
+| **Embeddings** | Sentence Transformers | Memory encoding |
+| **Deployment** | Docker | Reproducible environment |
+
+---
+
+# ⚙️ Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yashdesai023/agentic-workflow.git
+cd agentic-workflow
+```
+
+### 2. Create `.env`
+
+```env
+GOOGLE_API_KEY=YOUR_API_KEY
+```
+
+### 3. Install Dependencies
+
+```bash
+python -m venv venv
+source venv/bin/activate       # Mac/Linux
+venv\Scripts\activate          # Windows
+
+pip install -r requirements.txt
+```
+
+---
+
+# ▶️ Run the Application
+
+### **Terminal 1 — Backend (FastAPI)**
+
+```bash
+uvicorn src.api.main:app --reload
+```
+
+API Docs → http://127.0.0.1:8000/docs
+
+### **Terminal 2 — Frontend (Streamlit)**
+
+```bash
+streamlit run src/ui/ui_app.py
+```
+
+UI → http://localhost:8501
+
+---
+
+# 🧪 Testing Scenarios (For Recruiters & Hiring Managers)
+
+### **Scenario 1 — Full Workflow Intelligence**
+
+Input email:
+> “Fix login bug, update policy by Friday, and schedule a design meeting for Tuesday.”
+
+What the system will produce:  
+1. **Summary** (clean, actionable)  
+2. **Task Breakdown** (JSON with deadlines)  
+3. **Reply Draft** (professional confirmation)
+
+---
+
+### **Scenario 2 — Memory Recall (RAG)**  
+Teach the system:
+> “Project codename for the AI initiative is OMEGA-RED.”
+
+Then search memory:
+- Query: “What is the project code?”  
+**Expected:** Retrieve “OMEGA-RED” with exact context.
+
+---
+
+# 🐳 Docker Usage
+
+```bash
+docker build -t agentic-workflow .
+docker run -p 8080:8080 agentic-workflow
+```
+
+---
+
+# 📂 Project Structure
+
+```text
+Agentic_AI_Workflow/
+│
 ├── src/
-│   ├── api/             # FastAPI endpoints
-│   ├── agents/          # Reader, Summarizer, TaskExtractor, ReplyAgent, ActionAgent
-│   ├── services/        # email_service, calendar_service, oauth, storage_adapter
-│   ├── embeddings/      # embedder wrapper + vectorstore adapter
-│   ├── workers/         # Celery / background tasks
-│   ├── models/          # pydantic-style model specs (docs)
-│   └── core.py          # orchestrator entrypoints
-├── tests/
-├── sample_data/         # sample emails for testing
-├── infra/
-├── docker/
+│   ├── agents/             # All intelligent agents
+│   ├── api/                # FastAPI routes
+│   ├── pipeline/           # CrewAI Orchestration
+│   ├── tools/              # Vector DB & utilities
+│   ├── ui/                 # Streamlit Frontend
+│   └── main.py             # CLI entry point
+│
+├── data/                   # Sample email data
+├── Dockerfile
+├── requirements.txt
 └── README.md
 ```
 
 ---
 
-## Running locally (conceptual steps)
+# 🎯 Why This Project Is a Job-Cracking Flagship
 
-* Create virtual environment: `python -m venv .venv`
-* Install dependencies (add list to `requirements.txt`): e.g., FastAPI, httpx, langchain, faiss-cpu (or faiss-gpu), sqlalchemy, pydantic, celery, redis, pytest, structlog.
-* Add environment variables (LLM keys, Gmail OAuth client, DB URL). **Do not commit secrets.**
-* Start with mock adapters: ingest `sample_data/` files to test the pipeline.
-* When ready, enable Gmail OAuth and production adapters.
+This project demonstrates:
 
-(We’ll fill exact commands later when you’re ready to implement; at this stage the README must remain provider-agnostic.)
+✔️ Real **Agentic AI Development**  
+✔️ **RAG + Vector Memory** integration  
+✔️ **Backend Engineering (FastAPI)**  
+✔️ **Frontend Integration (Streamlit)**  
+✔️ **Containerization (Docker)**  
+✔️ **Production architecture thinking**  
+✔️ Fits **GenAI Engineer / MLOps / AI Developer** roles perfectly  
 
----
-
-## Environment variables (example list — document in docs/runbook.md)
-
-* `LLM_PROVIDER` — e.g., openai, local
-* `LLM_API_KEY` — provider API key
-* `GMAIL_CLIENT_ID`, `GMAIL_CLIENT_SECRET`
-* `DATABASE_URL` — sqlite:///./data.db or postgres URL
-* `REDIS_URL` — for Celery (optional)
+This is EXACTLY the type of project hiring managers want.
 
 ---
 
-## API (placeholder)
+# 📬 Contact & Portfolio
 
-* `POST /ingest` — ingest an email (raw or message_id)
-* `POST /process_email` — process an ingested email through agents
-* `GET /tasks` — list tasks
-* `POST /tasks/{id}/action` — approve/execute an action
+**Yash Desai — Generative AI & LLM Engineer**
 
-(Full endpoint specs are in `docs/api_spec.md`.)
-
----
-
-## Contribution & issues
-
-* Open issues for features (MVP: `mvp-ingest`, `prompts`, `rag`) and use GitHub Projects to track sprints.
-* Use PR templates and require at least one reviewer before merge.
+- **GitHub:** https://github.com/yashdesai023  
+- **LinkedIn:** https://www.linkedin.com/in/yash-s-desai  
+- **Email:** desaisyash1000@gmail.com  
 
 ---
 
-## Roadmap (high level)
-
-* MVP: mock ingestion, summarization, task extraction, SQLite persistence, local FAISS.
-* Iteration: multi-agent orchestration, reply generation, action adapters (mock).
-* Harden: Gmail OAuth, Celery+Redis, managed vector DB (Pinecone), CI/CD & deploy.
-* Future: UI for approvals, multi-user support, RBAC, analytics.
-
+_Developed with ❤️ using CrewAI + FastAPI + Gemini 1.5 Flash._
 
