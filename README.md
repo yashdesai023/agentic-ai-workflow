@@ -223,22 +223,6 @@ Agentic_AI_Workflow/
 
 ---
 
-# 🎯 Why This Project Is a Job-Cracking Flagship
-
-This project demonstrates:
-
-✔️ Real **Agentic AI Development**  
-✔️ **RAG + Vector Memory** integration  
-✔️ **Backend Engineering (FastAPI)**  
-✔️ **Frontend Integration (Streamlit)**  
-✔️ **Containerization (Docker)**  
-✔️ **Production architecture thinking**  
-✔️ Fits **GenAI Engineer / MLOps / AI Developer** roles perfectly  
-
-This is EXACTLY the type of project hiring managers want.
-
----
-
 # 📬 Contact & Portfolio
 
 **Yash Desai — Generative AI & LLM Engineer**
