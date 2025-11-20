@@ -36,3 +36,10 @@ pytest
 
 # Deployment
 gunicorn
+
+crewai
+crewai-tools
+langchain-google-genai
+python-dotenv
+streamlit
+requests

@@ -1,8 +1,0 @@
-Subject: Security Alert: New login from unrecognized device
-From: no-reply@secure-login.com
-Date: 2025-11-19
-
-We detected a new login to your account from an unrecognized device (IP: 192.168.1.55) on 2025-11-19 at 09:30 UTC.
-
-If this was you, you can ignore this message.
-If not, please reset your password immediately.

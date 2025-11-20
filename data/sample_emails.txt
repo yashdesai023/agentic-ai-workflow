@@ -1,0 +1,51 @@
+Subject: Project Alpha Sprint Review - Action Required
+From: sarah.manager@techcorp.com
+To: you@techcorp.com
+
+Hi Team,
+
+Great work on the deployment yesterday. However, we have a few lingering issues that need immediate attention before the Monday release.
+
+1. The login page alignment is broken on mobile devices.
+2. The API rate limiter is kicking in too early for premium users.
+3. We need the updated API documentation by Friday EOD.
+
+Please let me know who is picking up which task. Also, don't forget to update the Jira board.
+
+Best,
+Sarah
+
+---
+
+Subject: Inquiry regarding Enterprise Plan pricing
+From: mark.anderson@innovate.io
+To: sales@techcorp.com
+
+Hello,
+
+I was looking at your pricing page and noticed you offer an Enterprise tier, but there is no specific pricing listed. 
+
+Our company has about 500 seats and we would need SSO (Single Sign-On) integration. Could you send me a quote or set up a time to chat about the specific features included in this tier?
+
+I am available this Thursday afternoon.
+
+Regards,
+Mark Anderson
+CTO, Innovate IO
+
+---
+
+Subject: Coffee catch up?
+From: old.friend@gmail.com
+To: you@techcorp.com
+
+Hey!
+
+It's been a while since we last spoke. I saw your update on LinkedIn about the new AI agent project—sounds fascinating!
+
+I'm going to be in the city next Tuesday. If you have 30 mins, I'd love to grab a coffee and hear more about what you're building.
+
+Let me know if you're around.
+
+Cheers,
+Dave
