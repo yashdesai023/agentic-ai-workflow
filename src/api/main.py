@@ -5,6 +5,16 @@ from src.tools.vector_db import EmailVectorDB
 
 app = FastAPI()
 
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow all origins for dev
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 vector_db = EmailVectorDB()
 class EmailInput(BaseModel):
     email_content: str

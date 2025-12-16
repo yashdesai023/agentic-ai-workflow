@@ -43,3 +43,4 @@ langchain-google-genai
 python-dotenv
 streamlit
 requests
+langchain-huggingface
